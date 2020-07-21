@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.details.DetailsActivity"
+        tools:ignore="ScrollViewSize">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/detailsProgressBar"
+            style="@style/CardViewLoading"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_10x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.30">
+
+            <ProgressBar
+                android:layout_width="@dimen/progress_bar_size"
+                android:layout_height="@dimen/progress_bar_size"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/detailsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ToolbarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/coverCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_3x"
+            android:layout_marginTop="@dimen/spacing_3x"
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsToolbar">
+
+            <ImageView
+                android:id="@+id/detailsCoverImageView"
+                android:layout_width="@dimen/poster_width"
+                android:layout_height="@dimen/poster_height"
+                android:contentDescription="@string/poster_image_description"/>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/poster_height"
+            android:layout_marginStart="@dimen/spacing_3x"
+            android:layout_marginEnd="@dimen/spacing_3x"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/coverCardView"
+            app:layout_constraintTop_toTopOf="@id/coverCardView">
+
+            <TextView
+                android:id="@+id/detailsTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/spacing_2x"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/title_size_details" />
+
+
+            <TextView
+                android:id="@+id/releaseDateAndDurationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailsTitleTextView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/spacing_2x"
+                android:layout_marginTop="@dimen/spacing_3x"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="@dimen/subtitle_size_details" />
+
+            <TextView
+                android:id="@+id/detailsImdbRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/releaseDateAndDurationTextView"
+                android:layout_alignStart="@id/releaseDateAndDurationTextView"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:drawableStart="@drawable/ic_imdb_logo"
+                android:drawablePadding="@dimen/spacing_2x"
+                android:text="8.1/10"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="@dimen/subtitle_size_details" />
+
+            <TextView
+                android:id="@+id/detailsImdbVotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/releaseDateAndDurationTextView"
+                android:layout_marginStart="@dimen/spacing_3x"
+                android:layout_marginTop="@dimen/spacing_1x"
+                android:layout_toEndOf="@id/detailsImdbRating"
+                android:drawableStart="@drawable/ic_vote"
+                android:drawablePadding="@dimen/spacing_1x"
+                android:textColor="@color/colorSubtitle"
+                android:textSize="@dimen/subtitle_size_details" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/genreLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_3x"
+            android:layout_marginEnd="@dimen/spacing_3x"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/coverCardView"
+            app:layout_constraintTop_toBottomOf="@id/coverCardView">
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/dividerView"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="@dimen/spacing_3x"
+            android:layout_marginTop="@dimen/spacing_3x"
+            android:layout_marginEnd="@dimen/spacing_3x"
+            android:background="@color/colorTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genreLayout" />
+
+        <TextView
+            android:id="@+id/plot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_3x"
+            android:layout_marginTop="@dimen/spacing_3x"
+            android:text="@string/plot"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/plot_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dividerView" />
+
+        <TextView
+            android:id="@+id/detailsPlotTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_1x"
+            android:paddingStart="@dimen/spacing_3x"
+            android:paddingEnd="@dimen/spacing_3x"
+            android:paddingBottom="@dimen/plot_padding_bottom"
+            android:textColor="@color/colorSubtitleEmptyState"
+            android:textSize="@dimen/subtitle_size_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/plot" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

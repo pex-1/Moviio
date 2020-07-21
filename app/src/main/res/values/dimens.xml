@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--General-->
+    <dimen name="spacing_1x">4dp</dimen>
+    <dimen name="spacing_2x">8dp</dimen>
+    <dimen name="spacing_3x">16dp</dimen>
+    <dimen name="spacing_4x">24dp</dimen>
+    <dimen name="spacing_5x">32dp</dimen>
+    <dimen name="spacing_6x">40dp</dimen>
+    <dimen name="spacing_7x">48dp</dimen>
+    <dimen name="spacing_8x">56dp</dimen>
+    <dimen name="spacing_9x">64dp</dimen>
+    <dimen name="spacing_10x">72dp</dimen>
+    <dimen name="card_corner_radius">4dp</dimen>
+    <dimen name="poster_width">100dp</dimen>
+    <dimen name="poster_height">150dp</dimen>
+    <dimen name="bookmark_size">30dp</dimen>
+
+    <!-- Progress Bar -->
+    <dimen name="default_inner_padding">10dp</dimen>
+    <dimen name="progress_bar_size">20dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="no_data_subtitle">16sp</dimen>
+    <dimen name="no_data_title">26sp</dimen>
+    <dimen name="list_image_size">100dp</dimen>
+    <dimen name="item_date_size">14sp</dimen>
+    <dimen name="item_title_size">18sp</dimen>
+    <dimen name="item_subtitle_size">16sp</dimen>
+    <dimen name="item_source_size">12sp</dimen>
+    <dimen name="search_text_size">16sp</dimen>
+    <dimen name="details_title_size">24sp</dimen>
+    <dimen name="article_content_size">16sp</dimen>
+
+    <!-- Favorites -->
+    <dimen name="empty_state_top_margine">120dp</dimen>
+    <dimen name="empty_state_image_height">100dp</dimen>
+    <dimen name="title_text_size_empty_state">20sp</dimen>
+    <dimen name="subtitle_text_size_empty_state">14sp</dimen>
+    <dimen name="title_text_size_favorites">18sp</dimen>
+    <dimen name="subtitle_text_size_favorites">12sp</dimen>
+    <dimen name="info_text_size">14sp</dimen>
+
+    <!-- Search -->
+    <dimen name="title_size_search">20sp</dimen>
+    <dimen name="subtitle_size_search">14sp</dimen>
+
+    <!-- Details -->
+    <dimen name="title_size_details">20sp</dimen>
+    <dimen name="subtitle_size_details">14sp</dimen>
+    <dimen name="plot_size">16sp</dimen>
+    <dimen name="plot_padding_bottom">50dp</dimen>
+
+</resources>

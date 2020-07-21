@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2e3851</color>
+    <color name="colorPrimaryDark">#1b212f</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorSubtitle">#606e93</color>
+    <color name="colorTitle">#fff</color>
+    <color name="colorSubtitleEmptyState">#A4ACBC</color>
+
+    <color name="colorTime">#5283c5</color>
+
+    <color name="colorWhiteTransparent">#cc5283c5</color>
+</resources>

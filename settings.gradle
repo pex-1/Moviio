@@ -1,0 +1,2 @@
+rootProject.name='Moviio'
+include ':app'
