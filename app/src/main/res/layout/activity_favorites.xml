@@ -72,16 +72,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <SearchView
+        <practice.moviio.ui.SearchView
             android:id="@+id/favoritesSearchView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/spacing_3x"
-            android:layout_marginEnd="@dimen/spacing_3x"
-            android:background="@drawable/search_background"
-            android:iconifiedByDefault="false"
-            android:queryBackground="@null"
-            android:queryHint="Search movies" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 
     </androidx.appcompat.widget.Toolbar>
 

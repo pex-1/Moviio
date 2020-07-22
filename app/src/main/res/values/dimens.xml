@@ -20,23 +20,6 @@
     <dimen name="default_inner_padding">10dp</dimen>
     <dimen name="progress_bar_size">20dp</dimen>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="appbar_padding">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
-    <dimen name="appbar_padding_top">8dp</dimen>
-    <dimen name="no_data_subtitle">16sp</dimen>
-    <dimen name="no_data_title">26sp</dimen>
-    <dimen name="list_image_size">100dp</dimen>
-    <dimen name="item_date_size">14sp</dimen>
-    <dimen name="item_title_size">18sp</dimen>
-    <dimen name="item_subtitle_size">16sp</dimen>
-    <dimen name="item_source_size">12sp</dimen>
-    <dimen name="search_text_size">16sp</dimen>
-    <dimen name="details_title_size">24sp</dimen>
-    <dimen name="article_content_size">16sp</dimen>
-
     <!-- Favorites -->
     <dimen name="empty_state_top_margine">120dp</dimen>
     <dimen name="empty_state_image_height">100dp</dimen>
@@ -49,6 +32,7 @@
     <!-- Search -->
     <dimen name="title_size_search">20sp</dimen>
     <dimen name="subtitle_size_search">14sp</dimen>
+    <dimen name="search_icon_size">24dp</dimen>
 
     <!-- Details -->
     <dimen name="title_size_details">20sp</dimen>

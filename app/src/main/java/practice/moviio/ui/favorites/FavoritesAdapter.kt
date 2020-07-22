@@ -81,7 +81,6 @@ class FavoritesAdapter @Inject constructor(private val clickListener: OnMovieCli
                 clickListener.onBookmarkClick(position, movie)
             }
 
-
             if (position == 0 || movieList[position - 1].year != movie.year) {
                 favoritesLayoutYearTextView.text = movie.year.toString()
                 favoritesItemYearLayout.visible()

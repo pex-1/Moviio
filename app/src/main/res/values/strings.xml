@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">Moviio</string>
 
-    <!-- Favorites -->
     <string name="empty_state_favorites">Empty state image, no favorites</string>
     <string name="empty_state_title_favorites">Favorites</string>
     <string name="empty_state_subtitle_favorites">You don\'t have any favorite movies in your list. \n Search movies by name to add them.</string>
     <string name="poster_image_description">Movie poster image</string>
     <string name="bookmark_icon">Bookmark icon</string>
     <string name="plot">PLOT</string>
+    <string name="search_movies_hint">Search movies</string>
 
-    <!-- Search -->
 </resources>

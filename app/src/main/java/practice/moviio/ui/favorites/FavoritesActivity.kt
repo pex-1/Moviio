@@ -1,13 +1,15 @@
 package practice.moviio.ui.favorites
 
 import android.os.Bundle
+import android.view.KeyEvent
+import android.view.View
 import android.view.animation.AnimationUtils
-import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_favorites.*
+import kotlinx.android.synthetic.main.view_search.*
 import practice.moviio.R
 import practice.moviio.data.response.details.MovieDetails
 import practice.moviio.di.viewmodel.ViewModelProviderFactory
@@ -43,26 +45,37 @@ class FavoritesActivity : DaggerAppCompatActivity(), FavoritesAdapter.OnMovieCli
 
         setSearchView()
 
+
     }
 
-    private fun setSearchView() {
-        favoritesSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener, android.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                favoritesSearchView.setQuery("", false)
-                favoritesSearchView.clearFocus()
-                if (query != null && query.trim().length > 2) {
-                    startActivity(SearchActivity.newInstance(this@FavoritesActivity, query))
-                } else {
-                    favoritesLayout.snackbar("Query should be at least 3 letters long!")
-                }
-                return true
-            }
+    fun searchMovies() {
+        val query = search_input_text.text.toString()
+        if (query.length < 3) {
+            this.toast("Query should be at least 3 letters long!")
+        } else {
+            applicationContext.hideKeyboard(favoritesLayout)
+            startActivity(SearchActivity.newInstance(this@FavoritesActivity, query))
+            search_open_view.visibility = View.INVISIBLE
+            search_input_text.setText("")
+        }
+    }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
+
+    private fun setSearchView() {
+        search_input_text.setOnKeyListener(object : View.OnKeyListener {
+            override fun onKey(v: View?, keyCode: Int, event: KeyEvent): Boolean {
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                    searchMovies()
+                    return true
+                }
                 return false
             }
         })
+        execute_search_button.setOnClickListener {
+            searchMovies()
+        }
     }
+
 
     private fun initRecyclerView() {
         favoritesRecyclerView.apply {
@@ -86,7 +99,7 @@ class FavoritesActivity : DaggerAppCompatActivity(), FavoritesAdapter.OnMovieCli
                 favoritesAdapter.notifyDataSetChanged()
                 Favorites.setFavorites(it)
             }
-            if(movies.size<1) favoritesEmptyStateLayout.visible()
+            if (movies.size < 1) favoritesEmptyStateLayout.visible()
             else favoritesEmptyStateLayout.gone()
         })
     }
@@ -105,7 +118,7 @@ class FavoritesActivity : DaggerAppCompatActivity(), FavoritesAdapter.OnMovieCli
         Favorites.removeFavorite(movie.imdbID)
         movies.removeAt(position)
 
-        if(movies.size == 0) favoritesEmptyStateLayout.visible()
+        if (movies.size == 0) favoritesEmptyStateLayout.visible()
         favoritesAdapter.setData(movies)
         favoritesAdapter.notifyDataSetChanged()
 

@@ -52,6 +52,7 @@
             app:layout_constraintTop_toBottomOf="@id/detailsToolbar">
 
             <ImageView
+                android:src="@drawable/placeholder"
                 android:id="@+id/detailsCoverImageView"
                 android:layout_width="@dimen/poster_width"
                 android:layout_height="@dimen/poster_height"

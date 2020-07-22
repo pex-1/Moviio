@@ -44,6 +44,7 @@
         app:cardCornerRadius="@dimen/card_corner_radius">
 
         <ImageView
+            android:src="@drawable/placeholder"
             android:contentDescription="@string/poster_image_description"
             android:id="@+id/itemPosterImageView"
             android:layout_width="@dimen/poster_width"

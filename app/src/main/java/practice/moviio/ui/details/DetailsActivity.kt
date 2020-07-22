@@ -135,6 +135,7 @@ class DetailsActivity : DaggerAppCompatActivity() {
     private fun setUi(movie: MovieDetails) {
         glide.load(movie.poster)
                 .centerCrop()
+                .placeholder(R.drawable.placeholder)
                 .into(detailsCoverImageView)
 
         detailsTitleTextView.text = movie.title
