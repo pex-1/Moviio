@@ -3,7 +3,6 @@ package practice.moviio.ui.search
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.view.animation.AnimationUtils
@@ -58,8 +57,6 @@ class SearchActivity : DaggerAppCompatActivity(), SearchAdapter.OnMovieClicked {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
-
-        Log.e("search", "started!")
 
         viewModel = ViewModelProvider(this, providerFactory).get(SearchViewModel::class.java)
 
