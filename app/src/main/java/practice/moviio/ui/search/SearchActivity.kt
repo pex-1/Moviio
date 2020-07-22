@@ -49,7 +49,7 @@ class SearchActivity : DaggerAppCompatActivity(), SearchAdapter.OnMovieClicked {
 
     override fun onResume() {
         super.onResume()
-        if (position > 0) {
+        if (position > -1) {
             searchAdapter.notifyItemChanged(position)
             position = -1
         }
